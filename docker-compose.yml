@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app:
+    image: backend-ace:latest
+    container_name: backend-ace
+    restart: always
+    ports:
+      - "9300:9500"
+    networks: 
+      - code-assignment-networks
+
+networks:
+  code-assignment-networks:
+    name: code-assignment-networks
